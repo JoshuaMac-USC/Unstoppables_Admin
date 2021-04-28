@@ -30,6 +30,7 @@
     color: #fff;
     overflow-y: auto;
     transition: width 500ms;
+    background-color: #CC5801;
 }
 
 .sidebar-header {
@@ -252,6 +253,10 @@ tbody tr:nth-child(even) {
 .badge.warning {
     background: #F0F6B2;
     color: orange;
+}
+.badge.repair{
+    background: #E3242B;
+    color: #680C07;  
 }
 
 .td-team {

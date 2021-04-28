@@ -16,26 +16,15 @@ app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
-// about page
-app.get('/about', function(req, res) {
-    res.render('pages/about');
+// car list page
+app.get('/carlist', function(req, res) {
+    res.render('pages/carlist');
 });
 
-// rent page
-app.get('/rentnow', function(req, res) {
-    res.render('pages/rentpage');
+// bookings page
+app.get('/booking', function(req, res) {
+    res.render('pages/booking');
 });
-
-// login page
-app.get('/login', function(req, res) {
-    res.render('pages/login');
-});
-
-//register page
-app.get('/register', function(req, res) {
-    res.render('pages/register');
-});
-
 
 app.listen(8080);
 console.log('8080 is the magic port');
