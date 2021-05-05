@@ -82,10 +82,14 @@
     width: calc(100% - 60px);
 }
 
-.main-content {
+.main-content{
     position: relative;
     margin-left: 240px;
     transition: margin-left 500ms;
+}
+form{
+    position: relative;
+    margin-left: 240px;
 }
 
 header {
