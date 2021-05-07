@@ -36,5 +36,10 @@ app.get('/profile', function(req, res) {
     res.render('pages/profile');
 });
 
+// profile page
+app.get('/editprofile', function(req, res) {
+    res.render('pages/editprofile');
+});
+
 app.listen(8080);
 console.log('8080 is the magic port');
