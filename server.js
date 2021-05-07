@@ -31,5 +31,10 @@ app.get('/carform', function(req, res) {
     res.render('pages/carform');
 });
 
+// profile page
+app.get('/profile', function(req, res) {
+    res.render('pages/profile');
+});
+
 app.listen(8080);
 console.log('8080 is the magic port');
