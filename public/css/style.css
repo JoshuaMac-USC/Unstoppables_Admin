@@ -87,6 +87,11 @@
     margin-left: 240px;
     transition: margin-left 500ms;
 }
+.carform,.profileform{
+    position: relative;
+    margin-left: 240px;
+    margin-top: 20px;
+}
 form{
     position: relative;
     margin-left: 240px;
@@ -120,7 +125,7 @@ header {
 }
 main {
     background: #f1f5f9;
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 1rem 3rem;
 }
 
@@ -128,51 +133,6 @@ main {
     color: var(--color-dark);
     margin-bottom: 1rem;
 }
-
-.dash-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 3rem;
-}
-
-.card-single {
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-}
-
-.card-body {
-    padding: 1.3rem 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.card-body span {
-    font-size: 1.5rem;
-    color: #777;
-    padding-right: 1.4rem;
-}
-
-.card-body h5 {
-    color: var(--text-grey);
-    font-size: 1rem;
-}
-
-.card-body h4 {
-    color: var(--color-dark);
-    font-size: 1.1rem;
-    margin-top: .2rem;
-}
-
-.card-footer {
-    padding: .2rem 1rem;
-    background: #f9fafc;
-}
-
-.card-footer a {
-    color: var(--main-color);
-}
-
 .recent {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -180,7 +140,7 @@ main {
 
 .activity-grid {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 85% 20%;
     grid-column-gap: 1.5rem;
 }
 
@@ -240,6 +200,10 @@ tbody tr:nth-child(even) {
     background: #E3242B;
     color: #680C07;  
 }
+.badge.out{
+    background: green;
+    color: greenyellow;
+}
 
 .td-team {
     display: flex;
@@ -257,19 +221,6 @@ tbody tr:nth-child(even) {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-.img-1 {
-    background-image: url(img/1.jpg);
-}
-
-.img-2 {
-    background-image: url(img/2.jpg);
-}
-
-.img-3 {
-    background-image: url(img/3.jpeg);
-}
-
 .summary-card {
     margin-bottom: 1.5rem;
     padding-top: .5rem;
@@ -298,28 +249,6 @@ tbody tr:nth-child(even) {
     font-weight: 700;
     color: var(--text-grey);
 }
-
-.bday-flex {
-    display: flex;
-    align-items: center;
-    margin-bottom: .3rem;
-}
-
-.bday-card {
-    padding: 1rem;
-}
-
-.bday-img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    border: 3px solid #efefef;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(img/3.jpeg);
-    margin-right: .7rem;
-}
-
 .text-center {
     text-align: center;
 }

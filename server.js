@@ -11,6 +11,11 @@ app.set('view engine', 'ejs');
 
 // use res.render to load up an ejs view file
 
+// landing page
+app.get('/landing', function(req, res) {
+    res.render('pages/landinglogin');
+});
+
 // index page
 app.get('/', function(req, res) {
     res.render('pages/index');
