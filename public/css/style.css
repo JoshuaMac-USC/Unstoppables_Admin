@@ -97,7 +97,7 @@ form{
     margin-left: 240px;
 }
 
-header {
+header{
     position: fixed;
     left: 240px;
     top: 0;
@@ -110,6 +110,18 @@ header {
     align-items: center;
     border-bottom: 1px solid #ccc;
     transition: left 500ms;
+}
+.pendingReserve,.clientList{
+    z-index: 100;
+    width: calc(100% - 137px);
+    background: #fff;
+    height: 60px;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    transition: left 500ms;
+    border-radius: 7px;
 }
 
 .search-wrapper {
@@ -128,6 +140,7 @@ main {
     min-height: 100vh;
     padding: 1rem 3rem;
 }
+
 
 .dash-title {
     color: var(--color-dark);

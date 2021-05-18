@@ -1,6 +1,12 @@
  <div class="main-content">
     <main>     
-         <section class="recent">
+         <section class="recentBooking">
+            <div class="clientList">
+                <div class="search-wrapper">
+                   <span class="ti-search"></span>
+                   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Client Name">
+                 </div>
+                 </div>
              <div class="activity-grid">
                  <div class="activity-card">
                      <h3>Bookings</h3>
@@ -53,6 +59,12 @@
                      </div>
                  </div>
                  </div><br>
+                 <div class="pendingReserve">
+                 <div class="search-wrapper">
+                    <span class="ti-search"></span>
+                    <input type="text" id="pendingInput" onkeyup="pendingSearch()" placeholder="Search for Pending Client">
+                  </div>
+                  </div>
                  <div class="activity-grid">
                     <div class="activity-card">
                         <h3>Pending Reservations</h3>
@@ -101,23 +113,42 @@
      </div>
      <script>
         function myFunction() {
-          var input, filter, table, tr, td, i,alltables;
-            alltables = document.querySelectorAll("table[data-name=myTable]");
+            var input, filter, table, tr, td, i, txtValue;
           input = document.getElementById("myInput");
           filter = input.value.toUpperCase();
-          alltables.forEach(function(table){
-              tr = table.getElementsByTagName("tr");
-              for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                  } else {
-                    tr[i].style.display = "none";
-                  }
-                }       
+          table = document.getElementById("bookingTable");
+          tr = table.getElementsByTagName("tr");
+        
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
               }
-          });
+            }
+          }
+        }
+        function pendingSearch() {
+            var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("pendingInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("pendingTable");
+          tr = table.getElementsByTagName("tr");
+        
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
         }
         </script>
         
